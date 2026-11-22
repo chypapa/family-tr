@@ -864,6 +864,7 @@ h4, .h4 { font-size: var(--fs-h4); font-weight: var(--fw-heading); line-height: 
 .lead--modal .overlay__close { top: var(--s-32); right: var(--s-32); }
 @media (max-width: 767px) {
   .lead--modal .lead__inner { padding: var(--s-32) var(--s-16); border-radius: var(--radius); }
+  .lead--modal .lead__card { padding: 0; }
   .lead--modal .overlay__close { top: var(--s-16); right: var(--s-16); }
 }
 
@@ -1532,7 +1533,7 @@ h4, .h4 { font-size: var(--fs-h4); font-weight: var(--fw-heading); line-height: 
 .consult-modal .form { flex: none; width: 100%; }  /* заголовок не заходит под крестик */
 .consult-modal .overlay__close { position: absolute; top: var(--s-16); right: var(--s-16); }   /* крестик — в правом верхнем углу плашки, на положение окна не влияет */
 @media (max-width: 767px) {
-  .consult-modal { padding: var(--s-16); }   /* все четыре иконки в один ряд */
+  .consult-modal { padding: var(--s-16) 0; }
 }
 @media (prefers-reduced-motion: reduce) {
   .overlay, .overlay__close, .consult-modal__box, .video-modal__player, .video-modal__missing { transition: none; }

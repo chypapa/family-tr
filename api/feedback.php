@@ -42,5 +42,9 @@ $sent = function_exists('mail') && mail(
     chunk_split(base64_encode($body)),
     $headers
 );
+if (!$sent) {
+    error_log('Feedback form: PHP mail did not accept the message.');
+}
+
 http_response_code($sent ? 200 : 503);
 echo $sent ? '{"sent":true}' : '{"sent":false}';
